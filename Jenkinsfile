@@ -16,7 +16,7 @@ pipeline {
         stage('Results') {
             steps {
 		junit '**/build/test-results/test/TEST-*.xml'
-                echo 'Results....'
+                echo 'Results......'
             }
         }
     }
