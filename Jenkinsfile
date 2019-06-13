@@ -16,6 +16,7 @@ pipeline {
         stage('Results') {
             steps {
 		junit '**/build/test-results/test/TEST-*.xml'
+		archiveArtifacts 'build/libs/*'
                 echo 'Results......'
             }
         }
