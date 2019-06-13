@@ -9,11 +9,13 @@ pipeline {
         }
         stage('Build') {
             steps {
+		sh './gradlew clean build'
                 echo 'Build..'
             }
         }
         stage('Results') {
             steps {
+		junit '**/build/test-results/test/TEST-*.xml'
                 echo 'Results....'
             }
         }
